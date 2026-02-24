@@ -2,7 +2,7 @@ name: Cleanup Old Workflow Runs
 
 on:
   schedule:
-    - cron: '0 3 * * 5' # 每周一 UTC 03:00（北京时间 11:00）
+    - cron: '0 18 * * 5' # 每周一 UTC 03:00（北京时间 11:00）
   workflow_dispatch:
 
 permissions:
