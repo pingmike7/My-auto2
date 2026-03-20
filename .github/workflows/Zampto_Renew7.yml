@@ -333,7 +333,14 @@ jobs:
           PROXY_SOCKS5: ${{ env.PROXY_SOCKS5 }}
         run: xvfb-run -a python Zampto_Renew7.py
         working-directory: ${{ env.WORKDIR }}   # 👈 关键
-
+      - name: 📸 上传截图
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zampto-screenshots-${{ github.run_id }}
+          path: output/screenshots/
+          if-no-files-found: warn
+          retention-days: 3
       # =========================
       # 🧹 清理
       # =========================
