@@ -338,7 +338,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zampto-screenshots-${{ github.run_id }}
-          path: output/screenshots/
+          path: '**/output/screenshots/*'
           if-no-files-found: warn
           retention-days: 3
       # =========================
